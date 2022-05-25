@@ -7,11 +7,14 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 模拟集群 IIR
+ */
 public class IIR {
 
-    private Logger logger = LoggerFactory.getLogger(IIR.class);
+    private final Logger logger = LoggerFactory.getLogger(IIR.class);
 
-    private Map<String, String> dataMap = new ConcurrentHashMap<String, String>();
+    private final Map<String, String> dataMap = new ConcurrentHashMap<String, String>();
 
     public String get(String key) {
         logger.info("IIR获取数据 key：{}", key);

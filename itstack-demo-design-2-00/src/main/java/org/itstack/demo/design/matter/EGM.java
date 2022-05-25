@@ -7,11 +7,14 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 模拟集群 EGM
+ */
 public class EGM {
 
-    private Logger logger = LoggerFactory.getLogger(EGM.class);
+    private final Logger logger = LoggerFactory.getLogger(EGM.class);
 
-    private Map<String, String> dataMap = new ConcurrentHashMap<String, String>();
+    private final Map<String, String> dataMap = new ConcurrentHashMap<String, String>();
 
     public String gain(String key) {
         logger.info("EGM获取数据 key：{}", key);
