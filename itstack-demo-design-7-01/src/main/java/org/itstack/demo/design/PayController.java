@@ -7,9 +7,9 @@ import java.math.BigDecimal;
 
 public class PayController {
 
-    private Logger logger = LoggerFactory.getLogger(PayController.class);
+    private final Logger logger = LoggerFactory.getLogger(PayController.class);
 
-    public boolean doPay(String uId, String tradeId, BigDecimal amount, int channelType, int modeType) {
+    public void doPay(String uId, String tradeId, BigDecimal amount, int channelType, int modeType) {
         // 微信支付
         if (1 == channelType) {
             logger.info("模拟微信渠道支付划账开始。uId：{} tradeId：{} amount：{}", uId, tradeId, amount);
@@ -32,7 +32,6 @@ public class PayController {
                 logger.info("指纹支付，风控校验指纹信息");
             }
         }
-        return true;
     }
 
 }
