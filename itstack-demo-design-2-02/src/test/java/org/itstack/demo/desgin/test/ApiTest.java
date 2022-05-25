@@ -22,6 +22,11 @@ public class ApiTest {
         String val02 = proxy_IIR.get("user_name_01");
         System.out.println("测试结果：" + val02);
 
+        CacheService localRedis = new CacheServiceImpl();
+        localRedis.set("user_name_01", "小傅哥");
+        String val03 = localRedis.get("user_name_01");
+        System.out.println("测试结果：" + val03);
+
     }
 
 }

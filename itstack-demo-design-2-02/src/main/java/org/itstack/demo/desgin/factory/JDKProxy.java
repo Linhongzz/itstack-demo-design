@@ -9,7 +9,8 @@ public class JDKProxy {
         InvocationHandler handler = new JDKInvocationHandler(cacheAdapter);
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         Class<?>[] classes = interfaceClass.getInterfaces();
-        return (T) Proxy.newProxyInstance(classLoader, new Class[]{classes[0]}, handler);
+        // TODO: 2022/5/25 查看源码
+        return (T) Proxy.newProxyInstance(classLoader, new Class[]{classes[0]}, handler);// 获取动态代理对象
     }
 
 }
