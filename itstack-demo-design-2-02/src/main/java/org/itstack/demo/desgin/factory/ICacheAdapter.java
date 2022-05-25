@@ -2,6 +2,9 @@ package org.itstack.demo.desgin.factory;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 定义接口，统一EGM和IIR方法
+ */
 public interface ICacheAdapter {
 
     String get(String key);

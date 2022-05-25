@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public class EGMCacheAdapter implements ICacheAdapter {
 
-    private EGM egm = new EGM();
+    private final EGM egm = new EGM();
 
     public String get(String key) {
         return egm.gain(key);

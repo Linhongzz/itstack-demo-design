@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ClassLoaderUtils {
 
-    private static Set<Class> primitiveSet = new HashSet<Class>();
+    private static final Set<Class> primitiveSet = new HashSet<>();
 
     static {
         primitiveSet.add(Integer.class);

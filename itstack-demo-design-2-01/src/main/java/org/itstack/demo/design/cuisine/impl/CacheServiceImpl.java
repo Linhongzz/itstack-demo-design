@@ -7,13 +7,17 @@ import org.itstack.demo.design.CacheService;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 在缓存服务中引入RedisUtils、EGM、IIR
+ * 通过增加传入redisType来区分使用哪一种缓存
+ */
 public class CacheServiceImpl implements CacheService {
 
-    private RedisUtils redisUtils = new RedisUtils();
+    private final RedisUtils redisUtils = new RedisUtils();
 
-    private EGM egm = new EGM();
+    private final EGM egm = new EGM();
 
-    private IIR iir = new IIR();
+    private final IIR iir = new IIR();
 
     public String get(String key, int redisType) {
 

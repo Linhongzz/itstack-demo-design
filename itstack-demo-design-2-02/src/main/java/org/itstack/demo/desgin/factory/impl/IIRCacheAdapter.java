@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public class IIRCacheAdapter implements ICacheAdapter {
 
-    private IIR iir = new IIR();
+    private final IIR iir = new IIR();
 
     public String get(String key) {
         return iir.get(key);
