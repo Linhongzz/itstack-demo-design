@@ -9,7 +9,7 @@ public class POPOrderDeliveredService {
 
         POPOrderDelivered mq = JSON.parseObject(message, POPOrderDelivered.class);
 
-        mq.getuId();
+        mq.getUId();
         mq.getOrderId();
         mq.getOrderTime();
 

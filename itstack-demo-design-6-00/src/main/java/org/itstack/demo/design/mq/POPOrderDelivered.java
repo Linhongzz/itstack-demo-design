@@ -1,6 +1,8 @@
 package org.itstack.demo.design.mq;
 
 import com.alibaba.fastjson.JSON;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -8,6 +10,8 @@ import java.util.Date;
 /**
  * 订单妥投消息
  */
+@Setter
+@Getter
 public class POPOrderDelivered {
 
     private String uId;     // 用户ID
@@ -16,54 +20,6 @@ public class POPOrderDelivered {
     private Date sku;       // 商品
     private Date skuName;   // 商品名称
     private BigDecimal decimal; // 金额
-
-    public String getuId() {
-        return uId;
-    }
-
-    public void setuId(String uId) {
-        this.uId = uId;
-    }
-
-    public String getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(String orderId) {
-        this.orderId = orderId;
-    }
-
-    public Date getOrderTime() {
-        return orderTime;
-    }
-
-    public void setOrderTime(Date orderTime) {
-        this.orderTime = orderTime;
-    }
-
-    public Date getSku() {
-        return sku;
-    }
-
-    public void setSku(Date sku) {
-        this.sku = sku;
-    }
-
-    public Date getSkuName() {
-        return skuName;
-    }
-
-    public void setSkuName(Date skuName) {
-        this.skuName = skuName;
-    }
-
-    public BigDecimal getDecimal() {
-        return decimal;
-    }
-
-    public void setDecimal(BigDecimal decimal) {
-        this.decimal = decimal;
-    }
 
     @Override
     public String toString() {
