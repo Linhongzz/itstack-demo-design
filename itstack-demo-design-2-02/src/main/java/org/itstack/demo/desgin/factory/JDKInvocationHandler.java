@@ -5,6 +5,10 @@ import org.itstack.demo.desgin.util.ClassLoaderUtils;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
+/**
+ * 需要被动态代理的类需要实现InvocationHandler接口，
+ * 重写invoke方法，实现代理
+ */
 public class JDKInvocationHandler implements InvocationHandler {
 
     /**
@@ -19,11 +23,10 @@ public class JDKInvocationHandler implements InvocationHandler {
     /**
      * 在触发方法的时候可以对方法进行增强
      *
-     * @param proxy  代理对象？
-     * @param method 方法
-     * @param args   参数
+     * @param proxy  invocationHandler
+     * @param method 触发的方法
+     * @param args   方法入参
      * @return 返回结果
-     * @throws Throwable 异常
      */
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
